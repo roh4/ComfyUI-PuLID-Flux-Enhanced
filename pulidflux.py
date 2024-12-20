@@ -76,7 +76,9 @@ def forward_orig(
     y: Tensor,
     guidance: Tensor = None,
     control=None,
-    transformer_options={}
+    transformer_options={},
+    *args,
+    **kwargs
 ) -> Tensor:
     patches_replace = transformer_options.get("patches_replace", {})
 
